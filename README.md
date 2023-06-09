@@ -19,7 +19,7 @@ This project aims to be a strong foundation for react-native applications. It pr
 
 ```bash
 # Clone the repo
-git clone https://github.com/flatlogic/react-native-starter.git
+git clone https://github.com/mohamed3asem/fixedSolutionTask.git
 
 # Navigate to clonned folder and Install dependencies
 cd react-native-starter && yarn install
