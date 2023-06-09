@@ -13,37 +13,32 @@ This project aims to be a strong foundation for react-native applications. It pr
 - [JDK > 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
 - [Android Studio and Android SDK](https://developer.android.com/studio)
 
-## Usage
+## Getting Started
 
-#### Use Template button
+#### 1. Clone and Install
 
-Click the "Use this template" button above the file list, then use the Owner drop-down menu, and select the account you want to own the repository. Creating a repository from a template has the following advantages:
+```bash
+# Clone the repo
+git clone https://github.com/flatlogic/react-native-starter.git
 
-- A repository created from a template starts with a single commit.
-- Commits to a repository created from a template do appear in your contribution graph.
-- Creating a repository from a template starts a new project quickly.
+# Navigate to clonned folder and Install dependencies
+cd react-native-starter && yarn install
 
-### Option 1: Using React-Native-Rename
+# Install Pods
+cd ios && pod install
+```
 
-You can start by cloning this repository and using [react-native-rename](https://github.com/junedomingo/react-native-rename). In the current state of this project, it should give you no issues at all, just run the script, delete your node modules and reinstall them and you should be good to go.
+#### 2. Open RNS in your iOS simulator
 
-Keep in mind that this library can cause trouble if you are renaming a project that uses `Pods` on the iOS side.
+Run this command to start the development server and to start your app on iOS simulator:
+```
+yarn run:ios
+```
 
-After that you should proceed as with any javascript project:
-
-- Go to your project's root folder and run `npm install`.
-- If you are using Xcode 12.5 or higher got to /ios and execute `pod install --`repo-update`
-- Run `npm run ios` or `npm run android` to start your application!
-
-(Using yarn: `yarn ios` or `yarn android`)
-
-Note: Please read the Setup environments section that is below in this file for more information about the execution scripts.
-
-### Option 2: Copy the structure to your project
-
-If you want to roll on your own and don't want to use this as a template, you can create your project and then copy the `/src` folder (which has all the code of your application) and update your `index.js`.
-
-Keep in mind that if you do this, you'll have to **install and link** all dependencies (as well as adding all the necessary native code for each library that requires it).
+Or, if you prefer Android:
+```
+yarn run:android
+```
 
 ## Folder structure
 
