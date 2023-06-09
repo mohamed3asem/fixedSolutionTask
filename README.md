@@ -1,17 +1,6 @@
-# React Native Template
-
-[![Moove It](https://circleci.com/gh/moove-it/react-native-template.svg?style=svg)](https://app.circleci.com/pipelines/github/moove-it/react-native-template?branch=master)
-
-This project aims to be a strong foundation for react-native applications. It provides a clear and organized structure, core dependencies, and boilerplate to jumpstart development.
-
 ## Prerequisites
 
-- [Node.js > 12](https://nodejs.org) and npm (Recommended: Use [nvm](https://github.com/nvm-sh/nvm))
-- [Watchman](https://facebook.github.io/watchman)
-- [Xcode 12](https://developer.apple.com/xcode)
-- [Cocoapods 1.10.1](https://cocoapods.org)
-- [JDK > 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
-- [Android Studio and Android SDK](https://developer.android.com/studio)
+- Please Visit https://reactnative.dev/docs/environment-setup for environmet setup
 
 ## Getting Started
 
@@ -22,22 +11,22 @@ This project aims to be a strong foundation for react-native applications. It pr
 git clone https://github.com/mohamed3asem/fixedSolutionTask.git
 
 # Navigate to clonned folder and Install dependencies
-cd react-native-starter && yarn install
+cd fixedSolutionTask && yarn install
 
 # Install Pods
-cd ios && pod install
+cd ios && bundle install && pod install
 ```
 
 #### 2. Open RNS in your iOS simulator
 
 Run this command to start the development server and to start your app on iOS simulator:
 ```
-yarn run:ios
+yarn run ios
 ```
 
 Or, if you prefer Android:
 ```
-yarn run:android
+yarn run android
 ```
 
 ## Folder structure
