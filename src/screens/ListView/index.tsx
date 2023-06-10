@@ -9,6 +9,7 @@ import {useListItemPress} from '~/hooks/useListItemPress';
 
 export const ListView = () => {
   const data = useFetchList();
+
   const {onListItemPress} = useListItemPress();
 
   return (

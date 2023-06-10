@@ -1,4 +1,4 @@
-import {useEffect} from 'react';
+import {useEffect, useDeferredValue} from 'react';
 
 import {fetchList} from '~/store/actions/listActions';
 import {useAppDispatch, useAppSelector} from '~/hooks/reduxHooks';
@@ -13,5 +13,5 @@ export const useFetchList = () => {
     dispatch(fetchList());
   }, [dispatch]);
 
-  return data;
+  return useDeferredValue(data);
 };
