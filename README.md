@@ -41,17 +41,17 @@ This template follows a very simple project structure:
   - `hooks`: Folder contains all custom hooks. 
   - `utils`: Folder contains all helper functions & utils.  
   - `screens`: Each screen should be stored inside its folder and inside it a file for its code and a separate one for the styles and tests.
-      - `Screen.js`
-      - `Screen.styles.js`
-      - `Screen.test.js`
+      - `Screen.ts`
+      - `Screen.styles.ts`
+      - `Screen.test.ts`
   - `store`: Folder to put all redux middlewares and the store.
     - `reducers`: This folder should have all your reducers, and expose the combined result using its `index.js`
     - `selectors`: Folder to store your selectors for each reducer.
     - `actions`: This folder contains all actions that can be dispatched to redux.
     - `types`   - `routes`: Folder to store the types related to redux.
   - `models` : Folder to contains all types related to apis
-  - `App.js`: Main component that starts your whole app.
-  - `index.js`: Entry point of your application as per React-Native standards.
+  - `App.ts`: Main component that starts your whole app.
+  - `index.ts`: Entry point of your application as per React-Native standards.
 
 ## Generate production version
 
