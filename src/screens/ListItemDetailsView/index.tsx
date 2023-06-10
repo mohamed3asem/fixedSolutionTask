@@ -4,7 +4,7 @@ import {Text} from '~/components/UIElements/Text';
 import type {ScreenProps} from '~/routes/ListStack';
 import {ListItem, List} from '~/components/shared';
 import {ViewWrapper} from '~/components/Layout/ViewWrapper';
-import {DeleteItemBtn} from '~/components/ListDetailsScreen';
+import {DeleteItemBtn} from '~/components/ListItemDetailsScreen';
 import {useAppSelector} from '~/hooks/reduxHooks';
 import {selectListItem} from '~/store/selectors/listSelectors';
 import {useListItemPress} from '~/hooks/useListItemPress';
