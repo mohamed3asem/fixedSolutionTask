@@ -5,20 +5,20 @@ import {
 } from '@react-navigation/stack';
 import {RouteProp} from '@react-navigation/native';
 
-import {ListView} from '~/views/ListView';
-import {ListItemDetails} from '~/views/ListItemDetailsView';
+import {ListView} from '~/screens/ListView';
+import {ListItemDetails} from '~/screens/ListItemDetailsView';
 import {ListItemType} from '~/models/ListItem';
 
-export type RootStackPatamList = {
+export type RootStackParamList = {
   ListItemDetails: Pick<ListItemType, 'key'>;
   List: undefined;
 };
 
-const Stack = createStackNavigator<RootStackPatamList>();
+const Stack = createStackNavigator<RootStackParamList>();
 
-export interface PageProps<T extends keyof RootStackPatamList> {
-  navigation: StackNavigationProp<RootStackPatamList, T>;
-  route: RouteProp<RootStackPatamList, T>;
+export interface ScreenProps<T extends keyof RootStackParamList> {
+  navigation: StackNavigationProp<RootStackParamList, T>;
+  route: RouteProp<RootStackParamList, T>;
 }
 
 export const LisStack = () => {

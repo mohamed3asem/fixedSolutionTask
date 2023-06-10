@@ -1,5 +1,6 @@
 import React, {ReactNode} from 'react';
-import {SafeAreaView, StyleSheet, ViewStyle} from 'react-native';
+import {SafeAreaView, ViewStyle} from 'react-native';
+import {styles} from './ViewWrapper.styles';
 
 type ViewWrapperProps = {
   children: ReactNode;
@@ -16,9 +17,3 @@ export const ViewWrapper = ({
     </SafeAreaView>
   );
 };
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#FFF',
-  },
-});

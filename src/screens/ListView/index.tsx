@@ -1,12 +1,10 @@
 import React from 'react';
 
-import {List} from '~/components/List';
-import {ListItem} from '~/components/ListItem';
+import {List, ListItem} from '~/components/shared';
 import {ListItemType} from '~/models/ListItem';
 import {ViewWrapper} from '~/components/Layout/ViewWrapper';
-import {SearchInput} from '~/components/SearchInput';
+import {SearchInput, ShuffleBtn} from '~/components/ListViewScreen';
 import {useFetchList} from '~/hooks/useFetchList';
-import {ShuffleBtn} from '~/components/ShuffleBtn';
 import {useListItemPress} from '~/hooks/useListItemPress';
 
 export const ListView = () => {

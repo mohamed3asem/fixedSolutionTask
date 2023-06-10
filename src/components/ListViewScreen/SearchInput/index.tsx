@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
-import {Button, SafeAreaView, StyleSheet, TextInput} from 'react-native';
+import {Button, SafeAreaView, TextInput} from 'react-native';
 import {useAppDispatch} from '~/hooks/reduxHooks';
 import {searchList} from '~/store/actions/listActions';
-
+import {styles} from './SearchInput.styles';
+// NOTE: it is better for this component to accept onPress function to be reusable
 export const SearchInput = () => {
   const [text, onChangeText] = useState('');
   const dispatch = useAppDispatch();
@@ -21,19 +22,3 @@ export const SearchInput = () => {
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  input: {
-    height: 40,
-    margin: 12,
-    borderWidth: 1,
-    padding: 10,
-    flex: 1,
-  },
-  container: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});

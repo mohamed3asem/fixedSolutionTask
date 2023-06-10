@@ -1,23 +1,16 @@
 import React from 'react';
-import {StackNavigationProp} from '@react-navigation/stack';
-import {Text} from 'react-native';
 
-import {List} from '~/components/List';
-import type {RootStackPatamList, PageProps} from '~/routes/ListStack';
-import {ListItem} from '~/components/ListItem';
+import {Text} from '~/components/UIElements/Text';
+import type {ScreenProps} from '~/routes/ListStack';
+import {ListItem, List} from '~/components/shared';
 import {ViewWrapper} from '~/components/Layout/ViewWrapper';
-import {DeleteItemBtn} from '~/components/DeleteItemBtn';
+import {DeleteItemBtn} from '~/components/ListDetailsScreen';
 import {useAppSelector} from '~/hooks/reduxHooks';
 import {selectListItem} from '~/store/selectors/listSelectors';
 import {useListItemPress} from '~/hooks/useListItemPress';
 import {ListItemType} from '~/models/ListItem';
 
-export type ListItemDetailsScreenNavigationProp = StackNavigationProp<
-  RootStackPatamList,
-  'ListItemDetails'
->;
-
-export const ListItemDetails = ({route}: PageProps<'ListItemDetails'>) => {
+export const ListItemDetails = ({route}: ScreenProps<'ListItemDetails'>) => {
   const listItem = useAppSelector(state =>
     selectListItem(state, route.params.key),
   );
@@ -28,7 +21,7 @@ export const ListItemDetails = ({route}: PageProps<'ListItemDetails'>) => {
   return (
     <ViewWrapper>
       <DeleteItemBtn ItemId={listItem.key} />
-      {listItem.description && <Text>{listItem.description}</Text>}
+      <Text>{listItem.description}</Text>
       <List<ListItemType>
         data={listItem.list}
         renderItem={item => (

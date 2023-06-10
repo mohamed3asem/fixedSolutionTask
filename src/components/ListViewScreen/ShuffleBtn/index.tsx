@@ -14,7 +14,7 @@ export const ShuffleBtn = () => {
 
   return (
     <Button
-      onPress={debounce(onShuffle, 600, {leading: true, trailing: false})}
+      onPress={debounce(onShuffle, 300, {leading: true, trailing: false})}
       title="Shuffle"
       color="#841584"
       accessibilityLabel="Learn more about this purple button"

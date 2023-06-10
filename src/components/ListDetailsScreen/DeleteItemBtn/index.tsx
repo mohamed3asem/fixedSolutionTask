@@ -14,8 +14,10 @@ export const DeleteItemBtn = ({ItemId}: DeleteItemBtnProps) => {
   const dispatch = useAppDispatch();
   const navigate = useNavigation();
   const onDelete = async () => {
-    await dispatch(deleteItem(ItemId));
-    navigate.goBack();
+    try {
+      await dispatch(deleteItem(ItemId));
+      navigate.goBack();
+    } catch (e) {}
   };
 
   return (

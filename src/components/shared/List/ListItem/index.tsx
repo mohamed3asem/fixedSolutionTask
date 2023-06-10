@@ -2,13 +2,13 @@ import React from 'react';
 import {
   GestureResponderEvent,
   ListRenderItemInfo,
-  StyleSheet,
   TouchableOpacity,
 } from 'react-native';
 
 import type {ListItemType} from '~/models/ListItem';
-import {ErrorBoundaries} from '~/components/ErrorBoundaries';
-import {Text} from '~/components/Text';
+import {ErrorBoundaries} from '~/components/shared/ErrorBoundaries';
+import {Text} from '~/components/UIElements/Text';
+import {styles} from './ListItem.styles';
 
 export type ListItemProp<T = ListItemType> = ListRenderItemInfo<T> & {
   onClick: ((event: GestureResponderEvent) => void) | undefined;
@@ -28,13 +28,3 @@ export const ListItem = <T extends ListItemType = ListItemType>({
     </ErrorBoundaries>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#eeeeee',
-    borderRadius: 10,
-    padding: 20,
-    marginVertical: 8,
-    marginHorizontal: 16,
-  },
-});
